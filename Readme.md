@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Elena Markova](https://up.htmlacademy.ru/react-individual/3/user/165974).
-* Наставник: `Неизвестно`.
+* Наставник: [Семён Якушев](https://github.com/saimon395).
 
 ---
 
