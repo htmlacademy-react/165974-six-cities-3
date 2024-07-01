@@ -61,3 +61,7 @@ export const listingData: ListingItem[] = [
     isFavorite: true,
   },
 ];
+
+export const Setting = {
+  PlacesFoundCount: 317,
+};

@@ -2,10 +2,11 @@ import ListingCardComponent from '../../components/listing-card/listing-card';
 import { ListingItem } from '../../data/data';
 
 type ListingPageProps = {
+  placesFoundCount: number;
   listingData: ListingItem[];
 }
 
-function ListingPage({listingData}: ListingPageProps): JSX.Element {
+function ListingPage({placesFoundCount, listingData}: ListingPageProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
 
@@ -84,7 +85,7 @@ function ListingPage({listingData}: ListingPageProps): JSX.Element {
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
 
-              <b className="places__found">312 places to stay in Amsterdam</b>
+              <b className="places__found">{placesFoundCount} places to stay in Amsterdam</b>
 
               <form className="places__sorting" action="#" method="get">
                 <span className="places__sorting-caption">Sort by</span>
