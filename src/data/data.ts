@@ -1,5 +1,5 @@
 export type ListingItem = {
-  id: number;
+  id: string;
   title: string;
   type: string;
   price: number;
@@ -11,7 +11,7 @@ export type ListingItem = {
 
 export const listingData: ListingItem[] = [
   {
-    id: 1,
+    id: 'listing-item-1',
     title: 'Beautiful & luxurious apartment at great location',
     type: 'Apartment',
     price: 120,
@@ -21,7 +21,7 @@ export const listingData: ListingItem[] = [
     isFavorite: false,
   },
   {
-    id: 2,
+    id: 'listing-item-2',
     title: 'Wood and stone place',
     type: 'Private room',
     price: 80,
@@ -31,7 +31,7 @@ export const listingData: ListingItem[] = [
     isFavorite: true,
   },
   {
-    id: 3,
+    id: 'listing-item-3',
     title: 'Canal View Prinsengracht',
     type: 'Apartment',
     price: 132,
@@ -41,7 +41,7 @@ export const listingData: ListingItem[] = [
     isFavorite: false,
   },
   {
-    id: 4,
+    id: 'listing-item-4',
     title: 'Nice, cozy, warm big bed apartment',
     type: 'Apartment',
     price: 180,
@@ -51,8 +51,8 @@ export const listingData: ListingItem[] = [
     isFavorite: false,
   },
   {
-    id: 5,
-    title: 'Nice, cozy, warm big bed apartment',
+    id: 'listing-item-5',
+    title: 'Wood and stone place',
     type: 'Room',
     price: 80,
     rating: 4,
@@ -66,6 +66,47 @@ export const nearPlacesData: ListingItem[] = [
   {...listingData[1]},
   {...listingData[2]},
   {...listingData[3]},
+];
+
+export type FavoritesItem = {
+  id: string;
+  city: string;
+  places: ListingItem[];
+}
+
+export const favoritesData: FavoritesItem[] = [
+  {
+    id: 'favorites-item-1',
+    city: 'Amsterdam',
+    places: [
+      {
+        ...listingData[3],
+        img: 'img/apartment-small-03.jpg',
+        isFavorite: true,
+      },
+      {
+        ...listingData[1],
+        img: 'img/room-small.jpg',
+        isFavorite: true,
+      },
+    ],
+  },
+  {
+    id: 'favorites-item-2',
+    city: 'Cologne',
+    places: [
+      {
+        id: 'listing-item-6',
+        title: 'White castle',
+        type: 'Apartment',
+        price: 180,
+        rating: 5,
+        img: 'img/apartment-small-04.jpg',
+        isPremium: false,
+        isFavorite: true,
+      },
+    ],
+  },
 ];
 
 export type OfferGalleryItem = {

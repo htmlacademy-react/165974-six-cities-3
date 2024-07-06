@@ -108,6 +108,10 @@ function ListingPage({listingData}: ListingPageProps): JSX.Element {
                   <ListingCardComponent
                     key={item.id}
                     data={item}
+                    additionalCssClasses={{
+                      card: 'cities__card',
+                      image: 'cities__image-wrapper',
+                    }}
                   />
                 ))}
 

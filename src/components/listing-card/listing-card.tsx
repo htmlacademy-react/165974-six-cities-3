@@ -2,9 +2,15 @@ import { ListingItem } from '../../data/data';
 
 type ListingCardComponentProps = {
   data: ListingItem;
+  additionalCssClasses?: {
+    card?: string;
+    image?: string;
+    info?: string;
+  };
+  imageDimensions?: [number, number]
 }
 
-function ListingCardComponent({data}: ListingCardComponentProps): JSX.Element {
+function ListingCardComponent({data, additionalCssClasses, imageDimensions}: ListingCardComponentProps): JSX.Element {
   const {
     title,
     type,
@@ -16,7 +22,7 @@ function ListingCardComponent({data}: ListingCardComponentProps): JSX.Element {
   } = data;
 
   return (
-    <article className="cities__card place-card">
+    <article className={`${additionalCssClasses?.card || ''} place-card`}>
 
       {isPremium && (
         <div className="place-card__mark">
@@ -24,23 +30,23 @@ function ListingCardComponent({data}: ListingCardComponentProps): JSX.Element {
         </div>
       )}
 
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      <div className={`${additionalCssClasses?.image || ''} place-card__image-wrapper`}>
         <a href="#">
           <img
             className="place-card__image"
             src={img}
-            width="260"
-            height="200"
+            width={imageDimensions ? imageDimensions[0] : 260}
+            height={imageDimensions ? imageDimensions[1] : 200}
             alt="Place image"
           />
         </a>
       </div>
 
-      <div className="place-card__info">
+      <div className={`${additionalCssClasses?.info || ''} place-card__info`}>
         <div className="place-card__price-wrapper">
 
           <div className="place-card__price">
-            <b className="place-card__price-value">&euro;{price}</b>
+            <b className="place-card__price-value">&euro;{price}&nbsp;</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
 

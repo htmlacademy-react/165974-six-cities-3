@@ -1,6 +1,7 @@
 // import ListingPage from '../../pages/listing-page/listing-page';
 // import { ListingItem } from '../../data/data';
-import OfferPage from '../../pages/offer-page/offer-page';
+import FavoritesPage from '../../pages/favorites-page/favorites-page';
+// import OfferPage from '../../pages/offer-page/offer-page';
 
 // type AppProps = {
 //   listingData: ListingItem[];
@@ -10,7 +11,7 @@ import OfferPage from '../../pages/offer-page/offer-page';
 function App(): JSX.Element {
   return (
     // <ListingPage listingData={listingData} />
-    <OfferPage />
+    <FavoritesPage />
   );
 }
 
