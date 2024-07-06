@@ -7,7 +7,7 @@ type ListingCardComponentProps = {
     image?: string;
     info?: string;
   };
-  imageDimensions?: [number, number]
+  imageDimensions?: [number, number];
 }
 
 function ListingCardComponent({data, additionalCssClasses, imageDimensions}: ListingCardComponentProps): JSX.Element {
