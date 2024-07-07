@@ -1,18 +1,13 @@
-// import ListingPage from '../../pages/listing-page/listing-page';
-// import { ListingItem } from '../../data/data';
-// import FavoritesPage from '../../pages/favorites-page/favorites-page';
-import LoginPage from '../../pages/login-page/login-page';
-// import OfferPage from '../../pages/offer-page/offer-page';
+import ListingPage from '../../pages/listing-page/listing-page';
+import { ListingItem } from '../../data/data';
 
-// type AppProps = {
-//   listingData: ListingItem[];
-// }
+type AppProps = {
+  listingData: ListingItem[];
+}
 
-// {listingData}: AppProps
-function App(): JSX.Element {
+function App({listingData}: AppProps): JSX.Element {
   return (
-    // <ListingPage listingData={listingData} />
-    <LoginPage />
+    <ListingPage listingData={listingData} />
   );
 }
 

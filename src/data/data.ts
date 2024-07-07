@@ -1,3 +1,14 @@
+export type LocationName = 'Paris' | 'Cologne' | 'Brussels' | 'Amsterdam' | 'Hamburg' | 'Dusseldorf';
+
+export const locationsData: LocationName[] = [
+  'Paris',
+  'Cologne',
+  'Brussels',
+  'Amsterdam',
+  'Hamburg',
+  'Dusseldorf',
+];
+
 export type ListingItem = {
   id: string;
   title: string;
