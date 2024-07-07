@@ -17,6 +17,10 @@ function NearPlacesComponent({data}: NearPlacesComponentProps): JSX.Element {
           <ListingCardComponent
             key={item.id}
             data={item}
+            additionalCssClasses={{
+              card: 'near-places__card',
+              image: 'near-places__image-wrapper',
+            }}
           />
         ))}
 
