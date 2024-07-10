@@ -1,0 +1,61 @@
+.page {
+  &--empty {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  &__main {
+    &--empty {
+      display: flex;
+      flex-grow: 1;
+
+      .page__not-found-container {
+        display: flex;
+      }
+    }
+
+    &--not-found {
+      padding-top: 11px;
+    }
+  }
+
+}
+
+.not-found {
+  padding: 0 15px 93px;
+  border-bottom: 2px solid rgba(222, 222, 222, 0.5);
+
+  &--empty {
+    width: 100%;
+    padding: 0 38px 93px;
+  }
+
+  &__status-wrapper {
+    width: 420px;
+    margin-top: 16.7vh;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 94px;
+    text-align: center;
+    background-image: url('/img/ico-saved.svg');
+    background-size: 60px 73px;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  &__status {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 32px;
+    line-height: 1.1875;
+  }
+
+  &__status-description {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}

@@ -34,7 +34,7 @@ export const listingData: ListingItem[] = [
   {
     id: 'listing-item-2',
     title: 'Wood and stone place',
-    type: 'Private room',
+    type: 'Room',
     price: 80,
     rating: 4,
     img: 'img/room.jpg',
