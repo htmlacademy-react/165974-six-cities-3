@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../../const';
+import LogoComponent from '../../logo/logo';
 
 type HeaderComponentProps = {
   isAuth?: boolean;
@@ -33,9 +34,7 @@ function HeaderComponent({isAuth = true, isSignInButtonHidden = false}: HeaderCo
         <div className="header__wrapper">
 
           <div className="header__left">
-            <Link className="header__logo-link" to={AppRoute.Home}>
-              <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
-            </Link>
+            <LogoComponent styleClassName='header' />
           </div>
 
           <nav className="header__nav">
