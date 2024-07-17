@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ListingPage from '../../pages/listing-page/listing-page';
+import { AppRoute, AuthorizationStatus } from '../../const';
 import { ListingItem } from '../../data/data';
-import { AppRoute } from '../../const';
+import ListingPage from '../../pages/listing-page/listing-page';
 import LoginPage from '../../pages/login-page/login-page';
 import OfferPage from '../../pages/offer-page/offer-page';
 import FavoritesPage from '../../pages/favorites-page/favorites-page';
 import NotFoundPage from '../../pages/not-found-page/not-found-page';
+import PrivateRoute from '../private-route/private-route';
 
 type AppProps = {
   listingData: ListingItem[];
@@ -29,7 +30,11 @@ function App({listingData}: AppProps): JSX.Element {
         />
         <Route
           path={AppRoute.Favorites}
-          element={<FavoritesPage />}
+          element={
+            <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+              <FavoritesPage />
+            </PrivateRoute>
+          }
         />
         <Route
           path="*"
