@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { AppRoute } from '../../const';
 import { ListingItem } from '../../data/data';
 
 type ListingCardComponentProps = {
@@ -12,6 +14,7 @@ type ListingCardComponentProps = {
 
 function ListingCardComponent({data, additionalCssClasses, imageDimensions}: ListingCardComponentProps): JSX.Element {
   const {
+    id,
     title,
     type,
     price,
@@ -31,7 +34,7 @@ function ListingCardComponent({data, additionalCssClasses, imageDimensions}: Lis
       )}
 
       <div className={`${additionalCssClasses?.image || ''} place-card__image-wrapper`}>
-        <a href="#">
+        <Link to={`${AppRoute.Offer}/${id}`}>
           <img
             className="place-card__image"
             src={img}
@@ -39,7 +42,7 @@ function ListingCardComponent({data, additionalCssClasses, imageDimensions}: Lis
             height={imageDimensions ? imageDimensions[1] : 200}
             alt="Place image"
           />
-        </a>
+        </Link>
       </div>
 
       <div className={`${additionalCssClasses?.info || ''} place-card__info`}>
@@ -73,7 +76,7 @@ function ListingCardComponent({data, additionalCssClasses, imageDimensions}: Lis
         </div>
 
         <h2 className="place-card__name">
-          <a href="#">{title}</a>
+          <Link to={`${AppRoute.Offer}/${id}`}>{title}</Link>
         </h2>
 
         <p className="place-card__type">{type}</p>
