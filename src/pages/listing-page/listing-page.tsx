@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import HeaderComponent from '../../components/layout/header/header';
 import ListingCardComponent from '../../components/listing-card/listing-card';
 import LocationsComponent from '../../components/locations/locations';
@@ -12,6 +13,10 @@ type ListingPageProps = {
 function ListingPage({listingData}: ListingPageProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
+
+      <Helmet>
+        <title>6 cities - Listing</title>
+      </Helmet>
 
       <HeaderComponent />
 

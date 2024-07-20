@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import HeaderComponent from '../../components/layout/header/header';
 import InsideListComponent from './components/inside-list/inside-list';
 import NearPlacesComponent from './components/near-places/near-places';
@@ -17,6 +18,10 @@ function OfferPage(): JSX.Element {
     currentOffer ? (
 
       <div className="page">
+
+        <Helmet>
+          <title>6 cities - {currentOffer.title}</title>
+        </Helmet>
 
         <HeaderComponent />
 

@@ -1,9 +1,14 @@
+import { Helmet } from 'react-helmet-async';
 import HeaderComponent from '../../components/layout/header/header';
 import LoginFormComponent from './components/login-form/login-form';
 
 function LoginPage(): JSX.Element {
   return (
     <div className="page page--gray page--login">
+
+      <Helmet>
+        <title>6 cities - Login</title>
+      </Helmet>
 
       <HeaderComponent isAuth={false} isSignInButtonHidden />
 

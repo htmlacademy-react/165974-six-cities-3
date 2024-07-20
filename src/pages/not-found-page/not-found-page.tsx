@@ -1,11 +1,16 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import HeaderComponent from '../../components/layout/header/header';
 import FooterComponent from '../../components/layout/footer/footer';
 import './not-found-page.scss';
 
-function NotFoundScreen(): JSX.Element {
+function NotFoundPage(): JSX.Element {
   return (
     <div className="page page--empty">
+
+      <Helmet>
+        <title>6 cities - Not found</title>
+      </Helmet>
 
       <HeaderComponent />
 
@@ -31,4 +36,4 @@ function NotFoundScreen(): JSX.Element {
     </div>
   );
 }
-export default NotFoundScreen;
+export default NotFoundPage;
