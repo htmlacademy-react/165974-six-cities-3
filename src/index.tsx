@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
-import { Setting, listingData } from './data/data';
+import { listingData } from './data/data';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App placesFoundCount={Setting.PlacesFoundCount} listingData={listingData} />
+    <App listingData={listingData} />
   </React.StrictMode>
 );
